@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'landing',
 ]
 
 MIDDLEWARE = [
@@ -78,16 +79,18 @@ WSGI_APPLICATION = 'laptime_analyzer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Database configuration
+if os.getenv('DJANGO_ENV') == 'production':
+    DATABASES = {
     'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
 }
-
-# In case DATABASE_URL is not set (such as when running locally), fallback to SQLite
-if 'DATABASE_URL' not in os.environ:
+else:  # Local development
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            'NAME': BASE_DIR / 'db.sqlite3',  # SQLite database file
         }
     }
 
