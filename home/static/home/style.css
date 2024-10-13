@@ -1,0 +1,62 @@
+/* home/static/home/style.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    background-color: #4CAF50; /* Green background */
+    color: white;              /* White text */
+    padding: 10px 20px;       /* Padding */
+    text-align: center;        /* Centered text */
+}
+
+/* Navbar styling */
+nav {
+    background-color: #333; /* Dark background */
+}
+
+nav ul {
+    list-style-type: none;   /* No bullets */
+    display: flex;           /* Display items in a row */
+    justify-content: center;  /* Center items */
+}
+
+nav ul li {
+    margin: 0 15px;         /* Spacing between items */
+}
+
+nav ul li a {
+    color: white;            /* White text */
+    text-decoration: none;   /* No underline */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Main content styling */
+main {
+    flex: 1;                 /* Allow this section to grow */
+    padding: 20px;          /* Padding around the content */
+}
+
+/* Footer styling */
+footer {
+    background-color: #4CAF50; /* Same green background as header */
+    color: white;              /* White text */
+    text-align: center;        /* Centered text */
+    padding: 10px 0;          /* Padding */
+}
