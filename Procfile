@@ -1,1 +1,1 @@
-web: gunicorn laptime_analyzer.wsgi
+web: gunicorn PKB.wsgi
