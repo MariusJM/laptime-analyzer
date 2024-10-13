@@ -15,12 +15,12 @@
     
     <nav>
         <ul>
-            <li><a href="#">Apie mus</a></li>
-            <li><a href="#">Naujienos</a></li>
-            <li><a href="#">Būrelis</a></li>
-            <li><a href="#">Pamokos</a></li>
-            <li><a href="#">Kainos</a></li>
-            <li><a href="#">Kontaktai</a></li>
+            <li><a href="{% url 'home' %}">Apie mus</a></li>
+            <li><a href="{% url 'naujienos' %}">Naujienos</a></li>
+            <li><a href="{% url 'burelis' %}">Būrelis</a></li>
+            <li><a href="{% url 'pamokos' %}">Pamokos</a></li>
+            <li><a href="{% url 'kainos' %}">Kainos</a></li>
+            <li><a href="{% url 'kontaktai' %}">Kontaktai</a></li>
             
             {% if user.is_authenticated %}
                 <li>
