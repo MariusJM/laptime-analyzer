@@ -15,21 +15,24 @@
     
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Achievements</a></li>
+            <li><a href="#">Apie mus</a></li>
+            <li><a href="#">Naujienos</a></li>
+            <li><a href="#">Būrelis</a></li>
+            <li><a href="#">Pamokos</a></li>
+            <li><a href="#">Kainos</a></li>
+            <li><a href="#">Kontaktai</a></li>
             
             {% if user.is_authenticated %}
                 <li>
                     <form id="logout-form" action="{% url 'logout' %}" method="POST">
                         {% csrf_token %}
                         <button type="submit" style="background:none; border:none; color:blue; text-decoration:underline; cursor:pointer;">
-                            Logout
+                            Atsijungti
                         </button>
                     </form>
                 </li>
             {% else %}
-                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'login' %}">Prisijungti</a></li>
             {% endif %}
         </ul>
     </nav>
@@ -42,7 +45,19 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 My Go-Kart Coaching. All rights reserved.</p>
+        <div style="display: flex; justify-content: center;">
+            <div style="display: flex; flex-direction: column; justify-content: left; text-align: left; padding-inline: 30px;">
+                <h3>Kontaktai</h3>
+                <p>El. paštas: plytine@kartodromas.lt</p>
+                <p>Tel. +370 699 56704</p>
+                <p>ADRESAS Plytinės g. 27, Vilnius LT-10105</p>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: left; text-align: left; padding-inline: 30px;">
+                <p>Darbo laikas</p>
+                <p>I – V 13:00 – 21:00</p>
+                <p>VI – VII 10:00 – 23:00</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
