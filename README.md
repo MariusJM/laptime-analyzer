@@ -26,3 +26,7 @@ ALTER ROLE pkb_user SET timezone TO 'UTC';
 GRANT ALL PRIVILEGES ON DATABASE pkb_db TO pkb_user;
 \q
 ```
+
+`echo "web: gunicorn PKB.wsgi" > Procfile`
+echo "python-3.12.6" > runtime.txt
+pip freeze > requirements.txt
