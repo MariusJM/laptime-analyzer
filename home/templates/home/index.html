@@ -1,37 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Go-Kart Coaching</title>
-    {% load static %}  <!-- Load the static template tag -->
-    <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
-</head>
-<body>
-    <header>
-        <h1>Plytinės kartodromo būrelis</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Achievements</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-    </nav>
-    
-    <main>
-        <section>
-            <p>Here you will find information about my services, achievements, and how to contact me.</p>
+<!-- home/templates/home/index.html -->
+{% extends 'home/base.html' %}
 
-
-            <!-- Additional content can be added here -->
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 My Go-Kart Coaching. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+{% block content %}
+<section>
+    <p>Here you will find information about my services, achievements, and how to contact me.</p>
+    <!-- Additional content can be added here -->
+</section>
+{% endblock %}
