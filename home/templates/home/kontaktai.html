@@ -1,6 +1,71 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
-<h2>Kontaktai</h2>
-<p>Contact Information...</p>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Kontaktai</h2>
+
+    <!-- Contact Information Section -->
+    <div class="row mb-5">
+        <!-- Address and Contact Info -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Kontaktinė Informacija</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong>Adresas:</strong> <br>
+                            Plytinės g. 27, Vilnius LT-10105<br>
+                            <small>(koordinatės: 54.724063, 25.349128)</small>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Telefonas:</strong> <br>
+                            <a href="tel:+37069956704">+370 699 56704</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong>El. paštas:</strong> <br>
+                            <a href="mailto:plytine@kartodromas.lt">plytine@kartodromas.lt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Darbo Laikas</h3>
+                    <ul class="list-unstyled">
+                        <li><strong>Pirmadienis:</strong> 13:00 – 21:00</li>
+                        <li><strong>Antradienis:</strong> 13:00 – 21:00</li>
+                        <li><strong>Trečiadienis:</strong> 13:00 – 21:00</li>
+                        <li><strong>Ketvirtadienis:</strong> 13:00 – 21:00</li>
+                        <li><strong>Penktadienis:</strong> 13:00 – 21:00</li>
+                        <li><strong>Šeštadienis:</strong> 11:00 – 21:00</li>
+                        <li><strong>Sekmadienis:</strong> 11:00 – 21:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Mūsų Vieta</h3>
+                    <!-- Google Maps Embed -->
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.2995081927584!2d25.2985533!3d54.6867863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd941e3a3c5671%3A0x2600d18d4c454541!2sPlytin%C4%97s%20g.%2027%2C%20Vilnius%2010105!5e0!3m2!1sen!2slt!4v1645783411384!5m2!1sen!2slt"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% endblock %}
