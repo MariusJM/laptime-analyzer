@@ -1,6 +1,150 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
-<h2>Kainos</h2>
-<p>Information about the prices...</p>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Kainos</h2>
+
+    <!-- Pricing Overview -->
+    <p class="lead text-center">
+        Mes siūlome įvairias treniruočių galimybes tiek pradedantiesiems, tiek pažengusiems lenktynininkams. Žemiau rasite mūsų pamokų kainoraštį.
+    </p>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- MINI Class Pricing -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header text-center bg-primary text-white">
+                    <h4>MINI klasė</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">50 EUR / užsiėmimas</h5>
+                    <p class="card-text">
+                        <strong>Į kainą įeina:</strong>
+                        <ul>
+                            <li>1 valandos užsiėmimas</li>
+                            <li>2 važiavimai po 10 min.</li>
+                            <li>Treniruotės su vaikų kartais (5,5 – 6 AG)</li>
+                            <li>Individualios rekomendacijos po treniruotės</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="card-footer text-center">
+                    <p>Pirmadieniais, Antradieniais, Trečiadieniais</p>
+                    <p>18:00 val., 19:00 val.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- JUNIOR Class Pricing -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header text-center bg-success text-white">
+                    <h4>JUNIOR klasė</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">50 EUR / užsiėmimas</h5>
+                    <p class="card-text">
+                        <strong>Į kainą įeina:</strong>
+                        <ul>
+                            <li>1 val. 15 min. užsiėmimas</li>
+                            <li>3 važiavimai po 10 min.</li>
+                            <li>Treniruotės su SODI SR4 kartais (9 AG)</li>
+                            <li>Pažangios vairavimo technikos ir analizė</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="card-footer text-center">
+                    <p>Ketvirtadieniais</p>
+                    <p>16:30 val.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Private Coaching Pricing -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header text-center bg-warning text-dark">
+                    <h4>Privati treniruotė</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">75 EUR / 1 val.</h5>
+                    <p class="card-text">
+                        <strong>Į kainą įeina:</strong>
+                        <ul>
+                            <li>Asmeninė treniruotė 1 prieš 1 su treneriu</li>
+                            <li>Pažangios technikos ir važiavimo analizė</li>
+                            <li>Treniruočių vaizdo analizė</li>
+                            <li>Lenktynių strategijos aptarimas</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="card-footer text-center">
+                    <p>Galimos individualios pamokos pagal susitarimą.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Winter Sessions Pricing -->
+    <h3 class="text-center mb-4">Žiemos Sezono Kainos</h3>
+
+    <p class="text-center">
+        Žiemos metu treniruojame ant sniego arba ledo, todėl sesijos apima papildomas vairavimo technikas ekstremaliomis sąlygomis.
+    </p>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- MINI Winter Class -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header text-center bg-info text-white">
+                    <h4>MINI Žiemos klasė</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">40 EUR / užsiėmimas</h5>
+                    <p class="card-text">
+                        <strong>Į kainą įeina:</strong>
+                        <ul>
+                            <li>1 valandos užsiėmimas ant sniego ar ledo</li>
+                            <li>2 važiavimai po 10 min.</li>
+                            <li>Važiavimo sąlygomis šaltyje mokymai</li>
+                            <li>Individualios rekomendacijos</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="card-footer text-center">
+                    <p>Treniruočių laikai priklauso nuo oro sąlygų.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- JUNIOR Winter Class -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header text-center bg-dark text-white">
+                    <h4>JUNIOR Žiemos klasė</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">60 EUR / užsiėmimas</h5>
+                    <p class="card-text">
+                        <strong>Į kainą įeina:</strong>
+                        <ul>
+                            <li>1 val. 15 min. užsiėmimas ant sniego ar ledo</li>
+                            <li>3 važiavimai po 10 min.</li>
+                            <li>Lenktynių sąlygomis ant ledo ir sniego analizė</li>
+                            <li>Pažangios technikos ir patarimai</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="card-footer text-center">
+                    <p>Treniruočių laikai priklauso nuo oro sąlygų.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 {% endblock %}

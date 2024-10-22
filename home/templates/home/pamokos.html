@@ -1,6 +1,199 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
-<h2>Pamokos</h2>
-<p>Information about the lectures...</p>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Pamokos</h2>
+
+    <!-- Introduction -->
+    <p class="lead">
+        Mūsų pamokose kiekviena sesija gali skirtis priklausomai nuo dalyvio lygio, tačiau čia pateikiama bendra pamokos struktūra ir mokymų planas sezono metu. Mes taip pat siūlome treniruotes žiemos sezono metu ant sniego ar ledo, kurios suteikia papildomų iššūkių vairavimo įgūdžiams tobulinti.
+    </p>
+
+    <!-- Lesson Structure (Expandable) -->
+    <section class="mb-5">
+        <h3>Standartinė Pamokos Struktūra</h3>
+        <p>Kiekviena pamoka apima šiuos etapus. Spustelėkite, kad sužinotumėte daugiau:</p>
+
+        <div class="accordion" id="lessonStructure">
+            <!-- Safety Briefing -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSafety">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSafety" aria-expanded="true" aria-controls="collapseSafety">
+                        Saugumo instruktažas
+                    </button>
+                </h2>
+                <div id="collapseSafety" class="accordion-collapse collapse show" aria-labelledby="headingSafety" data-bs-parent="#lessonStructure">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Taisyklingas šalmo, kostiumo ir pirštinių dėvėjimas.</li>
+                            <li>Lenktynių trasos signalai, taisyklingos stabdymo zonos.</li>
+                            <li>Avarinių situacijų sprendimas ir pirmoji pagalba.</li>
+                            <li>Specifinės instrukcijos žiemos sezonui: vairavimo ypatumai ant sniego ir ledo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warmup -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingWarmup">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWarmup" aria-expanded="false" aria-controls="collapseWarmup">
+                        Apšilimas (Fizinis ir psichologinis pasiruošimas)
+                    </button>
+                </h2>
+                <div id="collapseWarmup" class="accordion-collapse collapse" aria-labelledby="headingWarmup" data-bs-parent="#lessonStructure">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Fizinis apšilimas: pratimai kaklui, rankoms, ir pečiams.</li>
+                            <li>Psichologinis pasiruošimas: dėmesio sutelkimas ir strateginės lenktynių technikos.</li>
+                            <li>Specialūs pratimai, siekiant užtikrinti maksimalų susikaupimą varžybų metu.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Driving Session -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFirstDrive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFirstDrive" aria-expanded="false" aria-controls="collapseFirstDrive">
+                        Pirmas važiavimas (Pradedantieji ir vidutinio lygio vairuotojai)
+                    </button>
+                </h2>
+                <div id="collapseFirstDrive" class="accordion-collapse collapse" aria-labelledby="headingFirstDrive" data-bs-parent="#lessonStructure">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><strong>Pradedantieji</strong>: pagrindinė sėdėsena, teisinga akseleratoriaus ir stabdžių kontrolė, posūkių technika.</li>
+                            <li><strong>Vidutinio lygio vairuotojai</strong>: stabdymo taškų optimizavimas, greičio išlaikymas posūkiuose, šlapios trasos įveikimas.</li>
+                        </ul>
+                        <p>Žiemos sezono metu praktikuojame vairavimą ant sniego ar ledo, kas suteikia papildomų įgūdžių ir kontroliavimo galimybių.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Driving Feedback -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFirstFeedback">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFirstFeedback" aria-expanded="false" aria-controls="collapseFirstFeedback">
+                        Aptarimas po pirmojo važiavimo
+                    </button>
+                </h2>
+                <div id="collapseFirstFeedback" class="accordion-collapse collapse" aria-labelledby="headingFirstFeedback" data-bs-parent="#lessonStructure">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Individuali vairavimo technikos analizė.</li>
+                            <li>Vaizdo analizė (jei važiavimas filmuotas).</li>
+                            <li>Asmeninės rekomendacijos kitam važiavimui.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Driving Session -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSecondDrive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecondDrive" aria-expanded="false" aria-controls="collapseSecondDrive">
+                        Antrasis važiavimas (Pažengusiems)
+                    </button>
+                </h2>
+                <div id="collapseSecondDrive" class="accordion-collapse collapse" aria-labelledby="headingSecondDrive" data-bs-parent="#lessonStructure">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Stabdymo balansas ir stabdžių modulacija.</li>
+                            <li>Agresyvus lenkimas ir greičio kontrolė trasoje.</li>
+                            <li>Psichologinė ištvermė lenktynių metu.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Feedback -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFinalFeedback">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinalFeedback" aria-expanded="false" aria-controls="collapseFinalFeedback">
+                        Baigiamoji aptarimo sesija
+                    </button>
+                </h2>
+                <div id="collapseFinalFeedback" class="accordion-collapse collapse" aria-labelledby="headingFinalFeedback" data-bs-parent="#lessonStructure">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Galutinė analizė ir tobulinimo rekomendacijos.</li>
+                            <li>Kiekvieno dalyvio stipriųjų ir silpnųjų pusių aptarimas.</li>
+                            <li>Išvados po treniruotės žiemos sąlygomis.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Season Plan (Expandable) -->
+    <section>
+        <h3>Sezono Planas</h3>
+        <p class="lead">
+            Sezono metu dalyviai pereina per tris pagrindinius lygmenis: pradinį, vidutinį ir pažengusį. Pamokos gali vykti tiek įprastomis sąlygomis, tiek žiemos sezonu, kai praktikuojame ant sniego ir ledo. Be to, kiekvieną mėnesį rengiame kvalifikacijos ir varžybų sesijas, kurių metu analizuojame lenktynių laikus ir lyginame su ankstesniais mėnesiais.
+        </p>
+
+        <div class="accordion" id="seasonPlan">
+            <!-- Beginner Level -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBeginner">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeginner" aria-expanded="true" aria-controls="collapseBeginner">
+                        1. Pradinis lygis
+                    </button>
+                </h2>
+                <div id="collapseBeginner" class="accordion-collapse collapse show" aria-labelledby="headingBeginner" data-bs-parent="#seasonPlan">
+                    <div class="accordion-body">
+                        <p>Pagrindinis dėmesys pradedantiems vairuotojams:</p>
+                        <ul>
+                            <li>Teisinga vairavimo padėtis, pagrindinė kartingo valdymo technika.</li>
+                            <li>Posūkių trajektorija ir greičio kontrolė.</li>
+                            <li>Saugaus lenkimo pagrindai.</li>
+                            <li>Instrukcijos vairuojant ant šlapios trasos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intermediate Level -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingIntermediate">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntermediate" aria-expanded="false" aria-controls="collapseIntermediate">
+                        2. Vidutinis lygis
+                    </button>
+                </h2>
+                <div id="collapseIntermediate" class="accordion-collapse collapse" aria-labelledby="headingIntermediate" data-bs-parent="#seasonPlan">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Stabdymo taškų ir greičio modulavimo tobulinimas.</li>
+                            <li>Trasos įveikimas per skirtingas oro sąlygas (įskaitant sniegą ir ledą).</li>
+                            <li>Lenkimo strategijos varžybose.</li>
+                            <li>Kvalifikacijos važiavimų taktika.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Level -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingAdvanced">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced" aria-expanded="false" aria-controls="collapseAdvanced">
+                        3. Pažengęs lygis
+                    </button>
+                </h2>
+                <div id="collapseAdvanced" class="accordion-collapse collapse" aria-labelledby="headingAdvanced" data-bs-parent="#seasonPlan">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Kartingo reguliavimas: padangų slėgio ir svorio balanso nustatymas.</li>
+                            <li>Agresyvus lenkimas ir stabdymo gylis lenktynėse.</li>
+                            <li>Ištvermė ilgoje distancijoje ir psichologiniai iššūkiai.</li>
+                            <li>Analizė po kiekvieno mėnesio varžybų: lenktynių laikų palyginimas su ankstesniais rezultatais.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}
