@@ -10,4 +10,6 @@ urlpatterns = [
     path('pamokos/', views.pamokos, name='pamokos'),
     path('kainos/', views.kainos, name='kainos'),
     path('kontaktai/', views.kontaktai, name='kontaktai'),
+    path('create-news/', views.create_news, name='create_news'),
 ]
+

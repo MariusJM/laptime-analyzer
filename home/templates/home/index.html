@@ -1,9 +1,25 @@
-<!-- home/templates/home/index.html -->
 {% extends 'home/base.html' %}
 
 {% block content %}
 <section>
-    <p>Here you will find information about my services, achievements, and how to contact me.</p>
-    <!-- Additional content can be added here -->
+    <h2>Latest News</h2>
+
+    {% for article in news %}
+        <div class="card my-4">
+            <div class="card-body">
+                <h3>{{ article.headline }}</h3>
+                <p><strong>Posted by {{ article.author }} on {{ article.created_at }}</strong></p>
+
+                <!-- Use the safe filter to render the content as HTML -->
+                <div>{{ article.content|safe }}</div>
+
+                {% if article.image %}
+                    <img src="{{ article.image.url }}" alt="News Image" class="img-fluid">
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <p>No news articles available.</p>
+    {% endfor %}
 </section>
 {% endblock %}
