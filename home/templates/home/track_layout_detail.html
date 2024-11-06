@@ -1,0 +1,45 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Dropdown Selector -->
+    <div class="text-center mb-3">
+        <select onchange="location = this.value;" class="form-select w-50 mx-auto">
+            <option value="" disabled selected>Choose a track layout</option>
+            {% for item in all_layouts %}
+                <option value="{% url 'track_layout_detail' item.pk %}" {% if item == layout %}selected{% endif %}>
+                    {{ item.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="d-flex justify-content-between my-3">
+        {% if previous_layout %}
+            <a href="{% url 'track_layout_detail' previous_layout.pk %}" class="btn btn-outline-primary">&larr; Previous</a>
+        {% else %}
+            <span></span>  <!-- Empty span to keep space aligned -->
+        {% endif %}
+
+        {% if next_layout %}
+            <a href="{% url 'track_layout_detail' next_layout.pk %}" class="btn btn-outline-primary">Next &rarr;</a>
+        {% endif %}
+    </div>
+
+    <!-- Track Layout Detail -->
+    <div class="text-center">
+        <h1>{{ layout.name }}</h1>
+        <div class="my-4">
+            {% if layout.image_url %}
+                <img src="{{ layout.image_url }}" alt="{{ layout.name }}" class="img-fluid">
+            {% else %}
+                <img src="https://via.placeholder.com/600" alt="No image available" class="img-fluid">
+            {% endif %}
+        </div>
+        <div class="mt-4">
+            <p>{{ layout.description }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

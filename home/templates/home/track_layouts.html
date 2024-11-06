@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Track Layouts</h2>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for layout in layouts %}
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <a href="{% url 'track_layout_detail' layout.pk %}">
+                        {% if layout.thumbnail_url %}
+                            <img src="{{ layout.thumbnail_url }}" alt="{{ layout.name }}" class="card-img-top">
+                        {% else %}
+                            <img src="https://via.placeholder.com/150" alt="No image available" class="card-img-top">
+                        {% endif %}
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ layout.name }}</h5>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p class="text-center">No track layouts available at the moment.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

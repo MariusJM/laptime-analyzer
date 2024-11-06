@@ -19,3 +19,17 @@ class News(models.Model):
 
     def __str__(self):
         return self.headline
+
+
+class TrackLayout(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Layout Name")
+    thumbnail_url = models.URLField(verbose_name="Thumbnail URL", blank=True, null=True)  # URL for the thumbnail
+    image_url = models.URLField(verbose_name="Image URL", blank=True, null=True)  # URL for the main image
+    description = models.TextField(verbose_name="Description", blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Track Layout"
+        verbose_name_plural = "Track Layouts"

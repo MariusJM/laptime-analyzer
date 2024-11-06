@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Mano profilis</h2>
+    <p>Vartotojas: {{ user.username }}</p>
+    <p>El. paštas: {{ user.email }}</p>
+    <!-- Add more profile details here -->
+</div>
+{% endblock %}

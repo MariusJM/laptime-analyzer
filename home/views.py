@@ -48,3 +48,32 @@ def create_news(request):
     else:
         form = NewsForm()
     return render(request, 'home/create_news.html', {'form': form})
+
+# home/views.py or tracks/views.py
+
+from django.shortcuts import render, get_object_or_404
+from .models import TrackLayout
+
+# View to display all track layouts as cards
+def track_layouts(request):
+    layouts = TrackLayout.objects.all()
+    return render(request, 'home/track_layouts.html', {'layouts': layouts})
+
+# View to display details of a specific track layout
+def track_layout_detail(request, pk):
+    layout = get_object_or_404(TrackLayout, pk=pk)
+    
+    # Get the previous and next layouts, if they exist
+    previous_layout = TrackLayout.objects.filter(pk__lt=layout.pk).order_by('-pk').first()
+    next_layout = TrackLayout.objects.filter(pk__gt=layout.pk).order_by('pk').first()
+    
+    # Get all layouts for the dropdown selector
+    all_layouts = TrackLayout.objects.all()
+    
+    context = {
+        'layout': layout,
+        'previous_layout': previous_layout,
+        'next_layout': next_layout,
+        'all_layouts': all_layouts,
+    }
+    return render(request, 'home/track_layout_detail.html', context)
